@@ -7,6 +7,18 @@
             $('body').toggleClass('menu-has-opened');
         });
 
+        // header slide menu
+        $('.slide_menu_open').on('click', function () {
+            $('.slide-menu-hide').animate({
+                'right': '0px'
+            });
+        });
+        $('.slide_menu_close').on('click', function () {
+            $('.slide-menu-hide').animate({
+                'right': '-540px'
+            });
+        });
+
         $('.schedule-tabs .schedule-tab').on('click', function () {
             $('.time-table').hide();
             var dataId = $(this).data('id');
@@ -28,6 +40,20 @@
                     items: 1
                 }
             }
+        });
+
+        //slider with pager
+        $('.primary-slider').bxSlider({
+            auto: true,
+            autoControls: false,
+            stopAutoOnClick: true,
+            pager: true,
+            nextText: '',
+            prevText: ''
+        });
+
+        $('.search-btn').on('click', function(){
+            $('.search-form').slideDown();
         });
 
 
