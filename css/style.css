@@ -105,6 +105,9 @@ h5, .h5 {
 .color-grey {
 	color: #b9baba;
 }
+.color-grey-2 {
+	color: #838383!important;
+}
 
 .bg-white {
 	background-color: #ffffff;
@@ -131,6 +134,9 @@ h5, .h5 {
 }
 .bg-black {
 	background-color: #333333;
+}
+.bg-light-blue {
+	background-color: #009bdf;
 }
 
 .p-t-5 {
@@ -355,10 +361,15 @@ ul {
 	display: inline-block;
 	/*min-width: 160px;*/
 }
-.primary-btn:hover {
+.primary-btn.bg-light-green:hover {
 	color: #fff!important;
 	cursor: pointer;
 	box-shadow: 0px 6px 10px #00d3ac73;
+}
+.primary-btn.bg-light-blue:hover {
+	color: #fff!important;
+	cursor: pointer;
+	box-shadow: 0px 6px 10px #009bdf85;
 }
 .header-btn {
 	font-family: 'Oswald', sans-serif;
@@ -768,7 +779,120 @@ ul {
 	color: #16c1f3;
 }
 
+/*job-single*/
+.job-single-detail {
+	padding: 45px 35px;
+	background-color: #fff;
+}
+.job-single-custom-9 {
+	flex: 0 0 70%;
+	max-width: 70%;
+}
+.job-single-custom-3 {
+	flex: 0 0 30%;
+	max-width: 30%;
+}
+.job-single-list li {
+	padding-left: 25px;
+	position: relative;
+	margin-bottom: 17px;
+}
+.job-single-list li:before {
+	content: '\f101';
+	font-family: FontAwesome;
+	position: absolute;
+	left: 0;
+	color: #009bdf;
+}
 
+/*about-us*/
+.box-padding {
+	padding: 60px 50px ;
+}
+.about-ceycareers-right .paras p {
+	margin-bottom: 20px;
+}
+.about-ceycareers-right .paras p:last-child {
+	margin-bottom: 0;
+}
+.about-ceycareers-left {
+	padding-right: 20px;
+}
+
+/*contact-us*/
+.contact-us-left {
+	height: 100%;
+}
+.contact-detail-item {
+	position: relative;
+	margin-bottom: 30px;
+}
+.contact-detail-item:last-child {
+	margin-bottom: 0px;
+}
+.contact-detail-item img {
+	position: absolute;
+	left: 0;
+}
+.contact-detail-item-caption {
+	padding-left: 50px;
+	display: inline-block;
+}
+.contact-form input, .contact-form textarea, .contact-form select {
+	padding: 13px 25px;
+	font-size: 15px;
+	line-height: 20px;
+	color: #717171;
+	background-color: #edf4f7;
+	border: none;
+	width: 100%;
+	margin-bottom: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*companies-page*/
+.filter-dropdown {
+	display: flex;
+	align-items: center;
+}
+.filter-dropdown select {
+	color: #838383;
+	border: none;
+	padding: 10px 12px;
+	background-color: #ffffff;
+	font-size: 16px;
+}
+.filter-dropdown select:focus-visible {
+	outline: none;
+}
+.company-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 35px 40px;
+	margin-bottom: 30px;
+}
+
+/*apply-now-page*/
+.apply-container {
+	padding: 0 180px;
+}
+.apply-content {
+	padding: 45px 50px;
+}
+.background-highlight {
+	background-color: #a5e7db;
+	padding: 20px 30px;
+}
+.form-div {
+	background-color: #edf4f7;
+	padding: 13px 25px;
+	margin-bottom: 20px;
+}
+.form-div input {
+	padding: 10px 0 0;
+	margin: 0;
+}
 
 
 @media only screen and (max-width: 1199px) {
@@ -787,7 +911,22 @@ ul {
 		width: fit-content;
 		margin: 8px 0;
 	}
-
+	.job-single-detail .job-other-details {
+		flex-wrap: wrap;
+	}
+	.job-single-detail .other-details-item {
+		margin-bottom: 10px;
+	}
+	.apply-container {
+		padding: 0 140px;
+	}
+	.company-item {
+		flex-direction: column;
+		text-align: center;
+	}
+	.company-item-right {
+		padding-top: 15px;
+	}
 }
 
 
@@ -819,7 +958,26 @@ ul {
 	.footer-section {
 		padding-bottom: 50px;
 	}
-
+	.apply-container {
+		padding: 0 30px;
+	}
+	.company-item-right .job-other-details {
+		flex-direction: column;
+	}
+	.company-item-right .other-details-item {
+		margin-right: 0;
+	}
+	.contact-us-left {
+		height: unset;
+		margin-bottom: 30px;
+	}
+	.about-ceycareers-left, .about-ceyline-left {
+		padding-bottom: 40px;
+		padding-right: 0px;
+	}
+	.about-ceycareers-section {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width:767px) {
@@ -887,6 +1045,39 @@ ul {
 	.submit-cv-content h2 {
 		line-height: 45px;
 	}
+	.job-single-custom-9 {
+		flex: unset;
+		max-width: unset;
+	}
+	.job-single-custom-3 {
+		flex: unset;
+		max-width: unset;
+	}
+	.job-single-detail .job-other-details {
+		flex-direction: column;
+	}
+	.job-single-detail .other-details-item {
+		margin-right: 0px;
+	}
+	.job-single-detail .categories-list {
+		margin-bottom: 15px;
+	}
+	.job-single-list-cont {
+		text-align: left;
+	}
+	.job-single-custom-3 {
+		padding-top: 30px;
+	}
+	.apply-container {
+		text-align: center;
+	}
+	.form-div p {
+		text-align: left;
+	}
+	.filter-dropdown {
+		float: none;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width:600px) {
@@ -911,6 +1102,18 @@ ul {
 	.other-details-item {
 		margin: 0 0 5px;
 	}
+	.apply-container {
+		padding: 0;
+	}
+	.apply-content {
+		padding: 45px 40px;
+	}
+	.box-padding {
+		padding: 55px 40px;
+	}
+	.contact-us-left-up, .contact-us-right-up {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width:415px) {
@@ -920,4 +1123,5 @@ ul {
 	.list-pagination .item {
 		margin-bottom: 5px;
 	}
+
 }
