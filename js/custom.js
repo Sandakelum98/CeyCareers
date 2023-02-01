@@ -52,7 +52,7 @@
             prevText: ''
         });
 
-        $('.search-btn').on('click', function(){
+        $('.search-btn').on('click', function () {
             $('.search-form').slideDown();
         });
 

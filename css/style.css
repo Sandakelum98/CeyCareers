@@ -250,6 +250,12 @@ h5, .h5 {
 .p-l-5 {
 	padding-left: 5px;
 }
+.p-r-10 {
+	padding-right: 10px;
+}
+.p-l-10 {
+	padding-left: 10px;
+}
 .no-padding {
 	padding: 0;
 }
@@ -892,6 +898,150 @@ ul {
 .form-div input {
 	padding: 10px 0 0;
 	margin: 0;
+}
+
+
+/*post-job*/
+#multistepsform #progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	counter-reset: step;
+	text-align: center;
+}
+
+#multistepsform {
+	padding: 0 150px;
+	position: relative;
+}
+#multistepsform #progressbar li:first-child:after {
+	content: none;
+}
+#multistepsform #progressbar li.active {
+	color: #009bdf;
+}
+#multistepsform #progressbar li:after {
+	content: "";
+	width: 100%;
+	height: 2px;
+	background: #b7b7b7 !important;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1;
+}
+#multistepsform #progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #fff;
+	background: #b7b7b7;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+#multistepsform #progressbar li {
+	list-style-type: none;
+	color: #323232;
+	text-transform: uppercase;
+	font-size: 12px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+
+#multistepsform .form-content {
+	padding: 50px;
+	background-color: #fff;
+}
+#multistepsform #progressbar li.active:before, #multistepsform #progressbar li.active:after {
+	background: #009bdf !important;
+	color: white;
+}
+.que-list .que-item {
+	margin-bottom: 30px;
+}
+.que-item p {
+	font-size: 15px;
+}
+.que-item .question {
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+	position: absolute;
+	left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+	position: relative;
+	padding-left: 28px;
+	cursor: pointer;
+	line-height: 20px;
+	display: inline-block;
+	color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #ddd;
+	border-radius: 100%;
+	background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+	content: '';
+	width: 10px;
+	height: 10px;
+	background: #009bdf;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	border-radius: 100%;
+	-webkit-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+	opacity: 0;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.option-list li {
+	font-size: 15px;
+	margin-bottom: 7px;
+}
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+	outline: none;
+}
+.btn-next {
+	padding: 5px 35px;
+}
+.que-btn-cont {
+	display: flex;
+	justify-content: space-between;
+}
+#multistepsform .form-content textarea {
+	height: 130px;
+}
+.que-item .question span {
+	color: #f58368;
+}
+.form-banner {
+	background-color: #a5e7db;
+	padding: 20px 30px;
 }
 
 
